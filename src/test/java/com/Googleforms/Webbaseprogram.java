@@ -96,6 +96,62 @@ public class Webbaseprogram extends Baseclassforexcel {
 		Thread.sleep(4000);
 
 	}
+	
+	//Enter question2
+	public static void question2(String Qu2) throws InterruptedException {
+		driver.findElement(By.xpath("//div[@class='freebirdFormeditorViewItemRoot itemBorder freebirdFormeditorViewItemActive']//div[@class='freebirdMaterialIconIconImage freebirdMaterialIconIconDarkIcon freebird-qp-icon-copy-b']")).click();
+		WebElement element1=driver.findElement(By.xpath("//textarea[contains(text(),'BDD Is Popular and can be utilized for')]"));
+		element1.sendKeys(Keys.chord(Keys.CONTROL, "a"),Qu2);
+		Thread.sleep(4000);
+			}
+	
+	//Enter Option1
+	public static void option1qa2(String q2op1) throws InterruptedException {
+		//Enter option1
+		WebElement element = driver.findElement(By.xpath("//input[@value='Unit Test Cases']"));
+		element.sendKeys(Keys.chord(Keys.CONTROL, "a"), q2op1);
+		Thread.sleep(4000);
+}
+	//Enter Option2
+	public static void option2qa2(String q2op2) throws InterruptedException {
+		//Enter Name of option 2
+		driver.findElement(By.xpath("//div[@class='quantumWizTextinputSimpleinputEl docssharedWizOmnilistGhostitemInput freebirdFormeditorViewOmnilistGhostitemInput freebirdThemedInput']//input[@type='text']")).click();
+		WebElement element1=driver.findElement(By.xpath("//input[@value='Unit Test Cases']"));
+		element1.sendKeys(Keys.chord(Keys.CONTROL, "a"), q2op2);
+		Thread.sleep(4000);
+
+	}
+	//Eneter option3
+	public static void option3op3(String q2op3) throws InterruptedException {
+		//Enter Name of option 3
+
+		driver.findElement(By.xpath("//div[@class='quantumWizTextinputSimpleinputEl docssharedWizOmnilistGhostitemInput freebirdFormeditorViewOmnilistGhostitemInput freebirdThemedInput']//input[@type='text'] ")).click();
+		WebElement element1=driver.findElement(By.xpath("//input[@value='Ui leave Test Cases']"));
+		element1.sendKeys(Keys.chord(Keys.CONTROL, "a"), q2op3);
+		Thread.sleep(4000);
+	}
+	//Eneter option4
+
+	public static void option4op4(String q2op4) throws InterruptedException {
+		//Enter Name of option 4
+
+		driver.findElement(By.xpath("//div[@class='quantumWizTextinputSimpleinputEl docssharedWizOmnilistGhostitemInput freebirdFormeditorViewOmnilistGhostitemInput freebirdThemedInput']//input[@type='text']")).click();
+		WebElement element1=driver.findElement(By.xpath("//input[@value='Unit integration system level test cases']"));
+		element1.sendKeys(Keys.chord(Keys.CONTROL, "a"), q2op4);
+		Thread.sleep(4000);
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public static void savequestions() throws InterruptedException {
 		//Save question
 
@@ -110,6 +166,7 @@ public class Webbaseprogram extends Baseclassforexcel {
 		executor.executeScript("arguments[0].click();", element);
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//div[@class='quantumWizButtonEl quantumWizButtonPaperbuttonEl quantumWizButtonPaperbuttonFlat quantumWizButtonPaperbuttonFlatColored quantumWizButtonPaperbutton2El2 quantumWizDialogPaperdialogDialogButton exportDefaultDialogButton isUndragged']//span[@class='quantumWizButtonPaperbuttonLabel exportLabel'][contains(text(),'Save')]")).click();
+	Thread.sleep(4000);
 	}
 	
 	public static void getscreenshot() {
@@ -136,7 +193,7 @@ public class Webbaseprogram extends Baseclassforexcel {
 	public static void closebrowser()
 	{
 		//Close the browser
-		driver.close();
+		//driver.close();
 	}
 }
 
